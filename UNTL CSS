@@ -1,0 +1,387 @@
+@import url();
+:root {
+    --accent:#3ecce6;
+    --accent-color: #3ecce6;
+    --menu-bg-color-secondary: rgba(230, 230, 230, 1);
+}
+
+@font-face {
+	font-family:gamefont;
+	src:url(https://raw.githubusercontent.com/South-Paw/typeface-vag-rounded/master/files/vag-rounded-400.woff2);
+}
+
+@font-face {
+	font-family:hpammo;
+	src:url(https://fonts.gstatic.com/s/montserrat/v15/JTURjIg1_i6t8kCHKm45_dJE3gnD_g.woff2);
+}
+
+.youNewDiv,#seasonLabel	,#onetrust-consent-sdk,#aHider,.headerBarRight,#newsHolder,.verticalSeparator,#timerIcon,#ammoIcon,#ammoMax,#challIcon,#maxHP,#healthBar,#hudClassIcon,#braveWarning,#faceItIconM,.weapKey,#voiceDisplay,#pingIcon,#curGameInfo div,#kdIcon,#streamContainer,.button .classXPBar,.classHP,#spectButton [style="font-size:15px;color:rgba(44,44,44,0.6)"],.setSugBox2 {
+    display:none !important;
+}
+
+#uiBase.onMenu #timerDisplay {
+    position:fixed;
+    left:50%;
+    transform:translateX(-50%);
+    top:55%;
+    padding:0;
+    margin:0;
+}
+#mainLogo {
+    margin-top: 100px;
+    margin-bottom: -40px;
+    height: 240px /* adjust this to your liking */ !important
+}
+#mainLogo {
+    content: url(https://cdn.discordapp.com/attachments/714315896914575392/899880519284707399/UNTL_TRANSPERANT.png)
+}
+
+#timerVal {
+    font-size:50px;
+}
+
+#timerDisplay,#leaderDisplay,#termsInfo,#windowHolder,#menuItemContainer,.countIcon,.classCard,.chatItem,#ammoDisplay,#healthValueHolder,.button,#chatInput {
+    background-color:transparent !important;
+}
+
+#uiBase.onGame #chatHolder {
+    bottom:20px;
+}
+
+#ammoDisplay {
+    transform:none;
+    margin:0;
+    padding:0;
+    border-radius:0;
+    position:fixed;
+    left:calc(50% - 30px);
+    top:calc(50% + 30px);
+    width:50px;
+    height:4px;
+    background-image:linear-gradient(to right,var(--accent),var(--accent));
+}
+
+#ammoVal {
+    font-family:hpammo;
+    font-size:60px;
+    position:fixed;
+    right:35%;
+    bottom:20%;
+}
+
+#ammoVal:before {
+    content:'';
+    display:block;
+    font-size:50px;
+}
+
+#healthValueHolder {
+    margin:0;
+    padding:0;
+    position:fixed;
+    left:35%;
+    bottom:20%;
+}
+
+#healthValue {
+    font-family:hpammo;
+    font-size:60px;
+    text-align:center;
+}
+
+#healthValue:before {
+    content:
+    display:block;
+    font-size:50px;
+}
+
+.weapIcon {
+    position:fixed;
+    left:50%;
+    bottom:10px;
+    opacity:0 !important;
+    transform:translateX(-50%) translateY(100px);
+    transition:transform 0.25s,opacity 0.7s;
+    filter:brightness(0) drop-shadow(4px 4px var(--accent)) drop-shadow(-4px -4px var(--accent));
+}
+
+.weapIcon[style*="opacity: 1"] {
+    opacity:1 !important;
+    transform:translateX(-50%) translateY(0);
+    transition:transform 0.25s,opacity 0.7s;
+}
+
+#chatHolder {
+    transition:0.5s;
+}
+
+.leaderNameM span {
+    background-image: linear-gradient(to right, #00ffff, #074B9A, #117FA8, #02A8B0, #00D6BA, #00F2C1, #00FAC2, #01F3BD);
+    animation: gradient-border 1.3s linear infinite;
+    background-size: 400% 100%;
+    color: transparent !important;
+    -webkit-background-clip: text;
+}
+
+@keyframes gradient-border{0%, 200% {background-position: 0 0;}99.999999999999999% {background-position: -130% 0;}}
+}
+.menuClassPlayerClan {
+    background-image: linear-gradient(to right, #00ffff, #074B9A, #117FA8, #02A8B0, #00D6BA, #00F2C1, #00FAC2, #01F3BD);
+    animation: gradient-border 1.3s linear infinite;
+    background-size: 400% 100%;
+    color: transparent !important;
+    -webkit-background-clip: text;
+}
+
+.material-icons-outlined {
+color: #149ede !important
+}
+
+#subLogoButtons .button,#menuClassContainer .button {
+    border:none !important;
+}
+
+
+#killCount::before {
+    content: 'Kills';
+}
+
+#deathCount::before {
+    content: 'Deaths';
+}
+
+#streakCount::before {
+    content: 'Kill Streak';
+}
+#loadingBg {
+    background-image:url(https://media.discordapp.net/attachments/881182206893121546/899567992608788490/163454181281142476.gif);
+}
+
+#initLoader {
+   display:none !important;
+}
+
+/* bottom right menu */
+
+.verticalSeparatorInline {
+    display: none;
+    visibility: hidden;
+    height: 0;
+}
+
+#termsInfo:hover .verticalSeparatorInline {
+    display: inline-block;
+}
+
+#mapInfo {
+    font-size: 18px;
+    text-transform: var(--text-transform);
+}
+
+#termsInfo {
+    background-color: transparent;
+    margin-right: -22px;
+    padding-right: 0;
+    transition-duration: 0.5s;
+}
+
+#termsInfo:hover {
+    margin-right: -15px;
+    padding-right: 20px;
+    transition-duration: 0.5s;
+}
+
+#termsInfo::before {
+    content: 'UNTL on top';
+    font-size: 18px;
+    margin-right: 0;
+    padding-right: 0;
+    color: rgba(255, 255, 255, .5);
+}
+
+#termsInfo:hover::before {
+    margin-right: 12px;
+    transition-duration: 0.5s;
+}
+
+.terms {
+    font-size: 0;
+    color: var(--accent-color);
+    text-transform: var(--text-transform);
+    margin-right: 0;
+    padding-right: 0;
+    opacity: 0;
+    transition-duration: 0.5s;
+}
+
+.terms:hover {
+	text-decoration: none;
+	color: #fff;
+}
+
+#termsInfo:hover .terms {
+    font-size: 18px;
+    opacity: 1;
+    transition-duration: 0.5s;
+}
+
+#modVote {
+    font-size: 18px;
+}
+
+.voteHint {
+    background-color: transparent !important;
+    color: white;
+    text-shadow: none;
+}
+
+.voteHint:hover {
+    color: var(--accent-color);
+    filter: none;
+    -webkit-filter: none;
+}
+
+.material-icons.vote {
+    color: white;
+    font-size: 18px;
+}
+
+
+/* top left menu */
+
+.headerBarLeft {
+    background-color: transparent;
+}
+
+.verticalSeparator {
+    background-color: transparent;
+}
+
+
+
+#menuAccountUsername {
+    font-size: 16px;
+    left: 10%;
+}
+
+#menuKRCount {
+    color: white;
+    font-size: 16px;
+}
+
+.progressBar {
+    background: var(--menu-bg-color-secondary);
+    padding: 0;
+    border-radius: 4px;
+}
+
+.progressBarInner {
+    background: var(--accent-color);
+    border-radius: 4px;
+}
+
+
+#mLevelCont::before {
+    display: none !important;
+}
+
+#mLevelCont {
+    width: max-content;
+    background-color: transparent;
+}
+
+/*End Card*/
+
+
+
+.teamTotals {
+    background-color: transparent;
+}
+
+.teamTotalN0 {
+    color: rgba(44,44,44);
+    text-shadow: 0 0 4px #3ecce6, 0 0 4px #3ecce6;
+}
+
+.teamTotalN1 {
+    color: #3ecce6;
+    text-shadow: 0 0 4px #3ecce6, 0 0 4px #3ecce6;
+}
+
+
+.teamTotalScore, .teamTotalN0, .teamTotalN1 {
+    font-size: 24px;
+}
+
+#matchVoteHolder {
+    background-color: transparent;
+}
+
+.matchVote {
+    transition-duration: 0.25s;
+}
+
+.matchVote:hover {
+    box-shadow: 0 0 8px 2px #3ecce6;
+}
+
+.matchVoteThumb:hover {
+    opacity: unset;
+    transform: unset;
+}
+
+.endCard {
+    border-radius: 12px;
+    background-color: rgba(0,0,0,0.4);
+    box-shadow: 0 0 8px 2px #3ecce6;
+}
+
+.tabHeader.selected {
+    color: #3ecce6;
+    border-color: #3ecce6;
+}
+
+.reportBut {
+    color: #3ecce6;
+}
+
+#endTable span[style="color:#F8C55C"] {
+    color: #3ecce6 !important;
+}
+#endTable {
+    background-image:url();
+    background-size:cover;
+    background-repeat:no-repeat;
+}
+
+#killsIcon, #deathsIcon, #streakIcon, #kdIcon {
+    display: none;
+}
+
+#gameNameHolder:hover #mainLogo {
+}
+
+#gameNameHolder {
+    pointer-events: all;
+    font-size: 0;
+    color: transparent;
+    transition: 0.5s;
+}
+#gameNameHolder:hover {
+    font-size: 36px;
+    color: #fff;
+}
+
+#gameNameHolder::after {
+    content: "By Electrifiers and DrHuttl";
+    display: block;
+    font-family: 'By Electrifiers and DrHuttl';
+}
+
+#claimPop, #popupBack {
+    display: none !important;
+}
+
+.weapIcon {
+    filter:brightness(0.6) sepia(1) saturate(600%) opacity(100%) hue-rotate(140deg)
+}
